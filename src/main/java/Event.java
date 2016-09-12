@@ -22,6 +22,51 @@ class Event{
     mTotalCost = totalCost;
   }
 
+  public int calculateMusicCost(String music) {
+    if(music = "LifeBand") {
+      int musicCost = 1500;
+    }else if(music = "DJ") {
+      int musicCost = 500;
+    }else if(music = "CD") {
+      int musicCost = 200;
+    }else {
+      int musicCost = 0;
+    }
+  }
+
+  public int calculateFoodCost(String foodType, int numberOfGuests) {
+    if(foodType = "ThreeCourse") {
+      int foodCost = numberOfGuests * 75;
+    }else if(foodType = "Buffet") {
+      int foodCost = numberOfGuests * 50;
+    }else if(foodType = "Plated") {
+      int foodCost = numberOfGuests * 30;
+    }else {
+      int foodCost = 15;
+    }
+  }
+
+  public int calculateDrinkCost(String drinkType, int numberOfGuests) {
+    if(drinkType = "Full bar") {
+      int drinkCost = numberOfGuests * 20;
+    }else if(drinkType = "Wine") {
+      int drinkCost = numberOfGuests * 15;
+    }else if(drinkType = "SoftDrinks") {
+      int drinkCost = numberOfGuests * 10;
+    }else {
+      int drinkCost = 5;
+    }
+  }
+
+  public int calculateEntertainerCost(String numberOfntertainers) {
+    int entertainerCost = numberOfntertainers * 300;
+  }
+
+  public int calculateEventCost(int musicCost, int foodCost, int drinkCost, int entertainerCost) {
+    int eventCost = musicCost + foodCost + drinkCost + entertainerCost;
+    return(eventCost);
+  }
+
   public boolean eventPackage(int maxBudget){
     return (mTotalCost <= maxBudget);
   }
